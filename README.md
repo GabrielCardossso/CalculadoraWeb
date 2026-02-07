@@ -43,6 +43,11 @@ https://gabrielcardossso.github.io/CalculadoraWeb/
 - Implementação de CSS
 - Site publicado via GitHub Pages
 - Melhorias finais de acessibilidade
+
+### 🔹V5.1 - Rodapé do site
+- Rodapé adicionado
+- Links pessoais: Github e Instagram
+
 ---
 
 ## ⚠️ Limitações atuais

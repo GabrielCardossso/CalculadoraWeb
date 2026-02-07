@@ -105,3 +105,33 @@ button.clear {
   #display { font-size: 1.6rem; }
   button { height: 52px; }
 }
+
+/* Rodapé da calculadora */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #1a1f3b; /* fundo escuro combinando com a calculadora */
+  border-radius: 8px;
+  display: inline-block; /* deixa o rodapé no tamanho do conteúdo */
+  min-width: 200px;
+}
+
+footer a {
+  color: #4da6ff; /* azul claro para se destacar */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 12px;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #66ffff; /* muda de cor ao passar o mouse */
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
