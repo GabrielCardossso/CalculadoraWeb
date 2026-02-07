@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f1220;
+  --card: #171a2f;
+  --display: #0b0e1a;
+  --btn: #24285a;
+  --btn-op: #3a3fff;
+  --btn-eq: #20c997;
+  --btn-clear: #ff6b6b;
+  --text: #eaeaf0;
+  --muted: #b7b9d3;
+  --focus: #ffd166;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 600px at 50% -10%, #1b1f45, var(--bg));
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+}
+
+.app {
+  width: min(92vw, 360px);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+#display {
+  width: 100%;
+  height: 64px;
+  background: var(--display);
+  border: none;
+  border-radius: 12px;
+  padding: 0 14px;
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+#display:focus-visible {
+  outline: 3px solid var(--focus);
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  background: var(--btn);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+button.op {
+  background: var(--btn-op);
+}
+
+button.equal {
+  background: var(--btn-eq);
+  font-weight: 700;
+}
+
+button.clear {
+  grid-column: span 4;
+  background: var(--btn-clear);
+}
+
+/* Mobile tweak */
+@media (max-width: 360px) {
+  #display { font-size: 1.6rem; }
+  button { height: 52px; }
+}

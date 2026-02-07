@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calculadora Web</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="app" aria-labelledby="titulo">
+    <h1 id="titulo">Calculadora Web</h1>
 
-  <input type="text" id="display" disabled>
+    <input
+      id="display"
+      type="text"
+      inputmode="decimal"
+      aria-label="Display da calculadora"
+      disabled
+    />
 
-  <div>
-    <button onclick="adicionarNumero('7')">7</button>
-    <button onclick="adicionarNumero('8')">8</button>
-    <button onclick="adicionarNumero('9')">9</button>
-    <button onclick="escolherOperador('/')">/</button>
-  </div>
+    <section class="teclado" role="group" aria-label="Teclado da calculadora">
+  <!-- Linha 1 -->
+  <button onclick="adicionarNumero('7')">7</button>
+  <button onclick="adicionarNumero('8')">8</button>
+  <button onclick="adicionarNumero('9')">9</button>
+  <button class="op" onclick="escolherOperador('/')">÷</button>
 
-  <div>
-    <button onclick="adicionarNumero('4')">4</button>
-    <button onclick="adicionarNumero('5')">5</button>
-    <button onclick="adicionarNumero('6')">6</button>
-    <button onclick="escolherOperador('*')">*</button>
-  </div>
+  <!-- Linha 2 -->
+  <button onclick="adicionarNumero('4')">4</button>
+  <button onclick="adicionarNumero('5')">5</button>
+  <button onclick="adicionarNumero('6')">6</button>
+  <button class="op" onclick="escolherOperador('*')">×</button>
 
-  <div>
-    <button onclick="adicionarNumero('1')">1</button>
-    <button onclick="adicionarNumero('2')">2</button>
-    <button onclick="adicionarNumero('3')">3</button>
-    <button onclick="escolherOperador('-')">-</button>
-  </div>
+  <!-- Linha 3 -->
+  <button onclick="adicionarNumero('1')">1</button>
+  <button onclick="adicionarNumero('2')">2</button>
+  <button onclick="adicionarNumero('3')">3</button>
+  <button class="op" onclick="escolherOperador('-')">−</button>
 
-  <div>
-    <button onclick="adicionarNumero('0')">0</button>
-    <button onclick="adicionarPonto()">.</button>
-    <button onclick="calcular()">=</button>
-    <button onclick="escolherOperador('+')">+</button>
-  </div>
+  <!-- Linha 4 -->
+  <button onclick="adicionarNumero('0')">0</button>
+  <button onclick="adicionarPonto()">.</button>
+  <button class="equal" onclick="calcular()">=</button>
+  <button class="op" onclick="escolherOperador('+')">+</button>
 
-  <div>
-    <button onclick="limpar()">C</button>
-  </div>
+  <!-- Linha 5 -->
+  <button class="clear" onclick="limpar()">C</button>
+</section>
+  </main>
 
   <script src="script.js"></script>
 </body>
