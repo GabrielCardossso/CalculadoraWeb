@@ -1,29 +1,49 @@
 const display = document.getElementById("display");
-const buttons = document.querySelectorAll("button");
-const clearButton = document.querySelector(".clear");
-const equalsButton = document.querySelector(".equals");
+let primeiroNumero = "";
+let operador = "";
+let segundoNumero = "";
 
-function adicionar(valor) {
-    display.value += valor;
+function adicionarNumero(num) {
+    if (operador === "") {
+        primeiroNumero += num;
+        display.value = primeiroNumero;
+    } else {
+        segundoNumero += num;
+        display.value = segundoNumero;
+    }
+}
+
+function escolherOperador(op) {
+    if (primeiroNumero === "") return;
+    operador = op;
 }
 
 function calcular() {
-    display.value = eval(display.value);
+    let n1 = Number(primeiroNumero);
+    let n2 = Number(segundoNumero);
+    let resultado = 0;
+
+    if (operador === "+") {
+        resultado = n1 + n2
+    } else if (operador === "-") {
+        resultado = n1 - n2
+    } else if (operador === "*") {
+        resultado = n1 * n2
+    } else if (operador === "/") {
+        resultado = n1 / n2
+    }
+
+    display.value = resultado;
+
+    // reset pra continuar calculando
+    primeiroNumero = resultado.toString();
+    segundoNumero = "";
+    operador = "";
 }
 
 function limpar() {
+    primeiroNumero = "";
+    segundoNumero = "";
+    operador = "";
     display.value = "";
 }
-
-buttons.forEach((button) => {
-    const value = button.getAttribute("data-value");
-
-    if (value) {
-        button.addEventListener("click", () => {
-            adicionar(value);
-        });
-    }
-});
-
-equalsButton.addEventListener("click", calcular);
-clearButton.addEventListener("click", limpar);

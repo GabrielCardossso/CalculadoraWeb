@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Calculadora</title>
+  <meta charset="UTF-8">
+  <title>Calculadora Web</title>
 </head>
 <body>
 
-    <h1>Calculadora</h1>
+  <input type="text" id="display" disabled>
 
-    <input type="text" id="display" disabled>
+  <div>
+    <button onclick="adicionarNumero('7')">7</button>
+    <button onclick="adicionarNumero('8')">8</button>
+    <button onclick="adicionarNumero('9')">9</button>
+    <button onclick="escolherOperador('/')">/</button>
+  </div>
 
-    <br><br>
+  <div>
+    <button onclick="adicionarNumero('4')">4</button>
+    <button onclick="adicionarNumero('5')">5</button>
+    <button onclick="adicionarNumero('6')">6</button>
+    <button onclick="escolherOperador('*')">*</button>
+  </div>
 
-    <button class="clear">C</button>
-    <br>
+  <div>
+    <button onclick="adicionarNumero('1')">1</button>
+    <button onclick="adicionarNumero('2')">2</button>
+    <button onclick="adicionarNumero('3')">3</button>
+    <button onclick="escolherOperador('-')">-</button>
+  </div>
 
-    <button data-value="7">7</button>
-    <button data-value="8">8</button>
-    <button data-value="9">9</button>
-    <button data-value="+">+</button>
+  <div>
+    <button onclick="adicionarNumero('0')">0</button>
+    <button onclick="limpar()">C</button>
+    <button onclick="calcular()">=</button>
+    <button onclick="escolherOperador('+')">+</button>
+  </div>
 
-    <br>
-
-    <button data-value="4">4</button>
-    <button data-value="5">5</button>
-    <button data-value="6">6</button>
-    <button data-value="-">-</button>
-
-    <br>
-
-    <button data-value="1">1</button>
-    <button data-value="2">2</button>
-    <button data-value="3">3</button>
-    <button data-value="*">*</button>
-
-    <br>
-
-    <button data-value="0">0</button>
-    <button data-value=".">.</button>
-    <button class="equals">=</button>
-    <button data-value="/">/</button>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
