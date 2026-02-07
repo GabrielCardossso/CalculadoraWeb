@@ -2,6 +2,8 @@
 
 Projeto de uma calculadora feita com HTML, CSS e JavaScript, desenvolvida passo a passo com foco em aprendizado.
 
+https://gabrielcardossso.github.io/CalculadoraWeb/
+
 ## 🚀 Versões
 
 ### 🔹 V1.0 – Versão inicial
