@@ -4,26 +4,41 @@ Projeto de uma calculadora feita com HTML, CSS e JavaScript, desenvolvida passo 
 
 ## 🚀 Versões
 
-### v1.0 — Versão inicial
-- Estrutura em HTML
-- Lógica em JavaScript
-- Operações básicas (+ - * /)
-- Suporte a números decimais
-- Uso de eval()
+### 🔹 V1.0 – Versão inicial
+- Estrutura básica em HTML
+- Calculadora funcional
+- Operações simples
+- Sem preocupação com estética
 
-### v2.0 — Refatoração do código
-- Removido JavaScript inline do HTML
-- Uso de addEventListener
-- Código mais organizado e legível
-- HTML mais limpo e sem lógica acoplada
+---
 
-## v3.0 – Remoção do eval()
-- Removido o uso de eval()
-- Implementação manual das operações matemáticas
+### 🔹 V2.0 – Organização do código
+- Separação de responsabilidades
+- Melhor estrutura do JavaScript
+- Pequenos ajustes de funcionamento
+
+---
+
+### 🔹 V3.0 – Remoção do `eval()`
+- Removido o uso de `eval()`
+- Implementação manual das operações
+- Maior controle da lógica
 - Código mais seguro e organizado
 
-## 📌 Próximos passos
-- Melhorar organização do código
-- Criar interface com CSS
-- Remover uso do eval()
-- Tornar o site acessível
+---
+
+### 🔹 V4.0 – Decimais, teclado e backspace
+- Suporte a números decimais (ponto ou vírgula)
+- Suporte ao uso do teclado
+- Implementado backspace (⌫)
+- Bloqueio de múltiplas operações para evitar quebra das regras matemáticas
+- Mantida a lógica de **uma operação por vez**
+- Projeto continua sem uso de `eval()`
+
+---
+
+## ⚠️ Limitações atuais
+- Apenas uma operação por vez
+- Não há suporte a múltiplas operações encadeadas
+- Não aplica precedência matemática (`*` e `/` antes de `+` e `-`)
+- Essas limitações são intencionais nesta fase do projeto.
