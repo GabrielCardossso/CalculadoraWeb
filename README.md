@@ -35,7 +35,7 @@ Projeto de uma calculadora feita com HTML, CSS e JavaScript, desenvolvida passo 
 - Mantida a lógica de **uma operação por vez**
 - Projeto continua sem uso de `eval()`
 
-### V5.0 – Layout refinado e lançamento público
+### 🔹V5.0 – Layout refinado e lançamento público
 - Layout 4x4 mais organizado
 - Botões padronizados por linha
 - Implementação de CSS
