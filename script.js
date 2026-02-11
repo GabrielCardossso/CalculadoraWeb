@@ -10,15 +10,12 @@ let segundoNumero = "";
 function adicionarNumero(num) {
   if (operador === "") {
     primeiroNumero += num;
-    display.value = primeiroNumero;
   } else {
-    // quando começa o segundo número, limpa o display
-    if (segundoNumero === "") {
-      display.value = "";
-    }
-    segundoNumero += num;
-    display.value = segundoNumero;
+    segundoNumero += num; // adiciona no segundo número
   }
+
+  // Atualiza o display mostrando operação completa
+  display.value = primeiroNumero + (operador ? " " + operador + " " : "") + segundoNumero;
 }
 
 function adicionarPonto() {
@@ -38,6 +35,7 @@ function escolherOperador(op) {
     if (operador !== "") return; /* bloqueia múltiplos operadores para previnir quebra de regra matemática 
     (soma vir antes de multiplicação) */
     operador = op;
+    display.value = primeiroNumero + (operador ? " " + operador + " " : "") + segundoNumero;
 }
 
 function calcular() {
